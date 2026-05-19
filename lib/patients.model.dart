@@ -1,6 +1,10 @@
 import 'package:exercicios_aula_4/patients.class.dart';
 
-final class PatientModel extends Patient {
+abstract interface class IPatientModel {
+  Map<String, dynamic> returnMap();
+}
+
+final class PatientModel extends Patient implements IPatientModel {
   PatientModel({
     required super.name,
     required super.doctor,
@@ -16,6 +20,7 @@ final class PatientModel extends Patient {
         dateTime: DateTime.parse(map['data']),
       );
 
+  @override
   Map<String, dynamic> returnMap() => {
     "name": super.name,
     "doctor": super.doctor,
