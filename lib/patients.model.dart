@@ -1,10 +1,8 @@
+import 'package:exercicios_aula_4/interfaces.dart';
 import 'package:exercicios_aula_4/patients.class.dart';
 
-abstract interface class IPatientModel {
-  Map<String, dynamic> returnMap();
-}
 
-final class PatientModel extends Patient implements IPatientModel {
+final class PatientModel extends Patient implements IReturnMap {
   PatientModel({
     required super.name,
     required super.doctor,
