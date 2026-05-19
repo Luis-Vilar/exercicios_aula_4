@@ -1,6 +1,6 @@
 import 'package:exercicios_aula_4/patients.class.dart';
 
-class PatientModel extends Patient {
+final class PatientModel extends Patient {
   PatientModel({
     required super.name,
     required super.doctor,
